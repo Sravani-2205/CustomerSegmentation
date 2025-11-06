@@ -1,0 +1,13 @@
+# ITPM Lab Report - Sravani Gullapalli (22BCB7138)
+# Docker configuration for Customer Segmentation Project
+
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["python", "--version"]
